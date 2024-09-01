@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .case-study-heading {
+            position: relative;
+            display: inline-block;
+        }
+        .case-study-heading::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -10px; /* テキストの下に線を配置 */
+            width: 100%;
+            height: 2px; /* 線の高さ */
+            background: linear-gradient(to right, #000 10%, #ccc 10%);
+        }
+        .check-icon {
+            background-color: black;
+            color: white;
+            border-radius: 50%;
+            padding: 4px; /* アイコンの内側の余白を調整 */
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <main id="contents" class="project detail">
+        <section id="project_article">
+            <div class="contents_inner">
+                <div class="max-w-4xl mx-auto p-6">
+                    <section id="heading1">
+                        <h1 class="text-3xl font-bold mb-14 relative py-4 px-6 bg-gray-100 text-gray-800">
+                            <span class="relative z-10">AI開発のデータ不足を克服 | Image-to-Imageによるデータ拡張の可能性</span>
+                            <span class="absolute top-0 left-0 w-0 h-0 border-[8px] border-transparent border-t-black border-l-black transform -translate-x-[calc(100%-16px)] -translate-y-[calc(100%-16px)]"></span>
+                            <span class="absolute bottom-0 right-0 w-0 h-0 border-[8px] border-transparent border-b-black border-r-black transform translate-full translate-full"></span>
+                        </h1>
+                        
+                        <div class="flex flex-wrap gap-2 mb-14">
+                            <span class="bg-gray-800 text-white text-sm px-3 py-1">AI開発・MLOps設計</span>
+                            <span class="bg-gray-800 text-white text-sm px-3 py-1">DX戦略</span>
+                            <span class="bg-gray-800 text-white text-sm px-3 py-1">オープンイノベーション</span>
+                        </div>
+                    </section>
+                    
+                    <section class="mb-20">
+                        <h2 class="text-4xl mt-4 mb-8 case-study-heading w-full">
+                            イントロダクション
+                        </h2>
+                        <h3 class="flex items-center bg-gray-100 p-4 my-7">
+                            <svg class="w-6 h-6 check-icon mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span class="font-semibold text-lg ml-2">AI開発におけるデータ不足の課題</span>
+                        </h3>
+                        <p class="my-8 text-gray-700 leading-7">
+                            近年、AIはビジネスの様々な分野で革命を起こす可能性を秘めた技術として注目されています。しかし、AI 開発、特に機械学習の分野では、高精度なモデルを構築するために大量のデータが必要となることが大きな課題となっています。
+                        </p>
+                        <p class="my-8 text-gray-700 leading-7">
+                            例えば、医療業界においては医療画像の解析では患者のプライバシー保護のためにデータの収集が制限されているケースや、製造業においても特定の故障データが希少であるため、十分なデータを得ることが困難なケースが非常に多く見られます。
+                        </p>
+                        <p class="my-8 text-gray-700 leading-7">
+                            これら専門性の高い分野や、データ収集にコストや時間がかかるケースでは、この「データ不足」が AI 導入を阻む大きな壁となっています。従来のデータ拡張技術では、限られたデータから十分な量のバリエーションを生成することが難しく、精度向上にも限界がありました。AI 導入を試みたものの、データ不足によって期待した成果を上げられなかった、というケースも少なくありません。
+                        </p>
+                        <h3 class="flex items-center bg-gray-100 p-4 my-8">
+                            <svg class="w-6 h-6 check-icon mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span class="font-semibold text-lg ml-2">Ridge-iのアプローチ</span>
+                        </h3>
+                        <p class="my-8 text-gray-700 leading-7">
+                            このような状況の中、Ridge-i では、画像生成AIモデルであるDiffusion model を活用したデータ拡張技術に注目し、研究開発を進めています。近年、Diffusion model は目覚ましい発展を遂げており、様々な先端技術が登場しています。
+                        </p>
+                        <p class="my-8 text-gray-700 leading-7">
+                            その中で、Ridge-i は、特に専門性が高く特定の用途に特化した画像を扱う分野において、限られたデータからでも高精度かつ効率的にデータ拡張を実現できる技術の1つとして、Diffusino modelの「Image-to-Image」の手法に着目しています。この画像を入力とする「Image-to-Image 」の手法は、テキストを入力とする テキスト条件付きDiffusion model では困難だった課題を克服できる、大きな可能性を秘めています。
+                        </p>
+                    </section>
+
+                    <section class="mb-20">
+                        <h2 class="text-4xl mt-4 mb-8 case-study-heading w-full">
+                            Diffusion model によるデータ拡張 - Image-to-Image の可能性 -
+                        </h2>
+                        <h3 class="flex items-center bg-gray-100 p-4 my-7">
+                            <svg class="w-6 h-6 check-icon mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span class="font-semibold text-lg ml-2">Diffusion model とは</span>
+                        </h3>
+                        <p class="my-8 text-gray-700 leading-7">
+                            Diffusion modelは、入力されたデータに対してノイズを徐々に加えて変換する過程と、そのノイズを除去して元のデータに戻す過程を学習させることで、データ生成を行う深層学習モデルです。このDiffusion model を使用して合成データを生成する最も一般的な方法は、テキストから画像への変換方法ですが、特殊な画像の場合、テキストで表現することが難しく、また、一般的な対象物（猫、犬、テーブル、椅子など）でトレーニングされたDifuusion model が専門用語を理解することも難しく、実務においての利用にハードルがあります。
+                        </p>
+                        <h3 class="flex items-center bg-gray-100 p-4 my-8">
+                            <svg class="w-6 h-6 check-icon mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span class="font-semibold text-lg ml-2">Ridge-iが着目した Image-to-Image の可能性</span>
+                        </h3>
+                        <p class="my-8 text-gray-700 leading-7">
+                            Ridge-i が関わる多くのプロジェクトでは、医療画像、衛星画像、設備画像など、専門的で特殊な状況を映した画像データを扱っています。これらの特徴を正確にテキストで表現するのは難しく、テキストを入力とするDiffusion modelでは、データ拡張に適した高品質な画像生成が困難でした。一方、Image-to-Image手法を用いることで、テキストに変換することなく、元の画像の特徴をそのまま維持してDiffusion modelに入力できるため、特殊なデータでも適切な画像生成が可能となります。これは、Ridge-iが扱うような専門性の高い分野でのデータ拡張に最適な手法となります。
+                        </p>
+                        <p class="my-8 text-gray-700 leading-7">
+                            Ridge-iでは、実際のプロジェクトにおけるデータ不足の壁を突破する技術としてDifusion modelのImage-to-Imageを用い成果を創出しています。
+                        </p>
+                    </section>
+
+                    <section class="mb-20">
+                        <h2 class="text-4xl mt-4 mb-8 case-study-heading w-full">
+                            ケーススタディ　- 衛星画像を用いた船舶検出モデルへの活用 -
+                        </h2>
+                        <h3 class="flex items-center bg-gray-100 p-4 my-7">
+                            <svg class="w-6 h-6 check-icon mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span class="font-semibold text-lg ml-2">課題背景と解決策</span>
+                        </h3>
+                        <p class="my-8 text-gray-700 leading-7">
+                            近年、衛星画像を用いた船舶検出は、違法漁業の監視や海上交通の安全確保など、様々な分野で注目されています。しかし、高精度な検出モデルを構築するには、天候や時間帯、船舶の種類など、多様な条件下で撮影された大量の衛星画像データが必要となります。
+                        </p>
+                        <p class="my-8 text-gray-700 leading-7">
+                            Ridge-i は、データ不足を解消するため、Image-to-Image を用いたデータ拡張技術を採用しました。具体的には、限られた数の船舶画像から、様々な角度、天候条件、海面状態を再現した画像を自動生成することで、学習データの大幅な増量を実現しました。
+                        </p>
+                        <h3 class="flex items-center bg-gray-100 p-4 my-8">
+                            <svg class="w-6 h-6 check-icon mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span class="font-semibold text-lg ml-2">成果</span>
+                        </h3>
+                        <p class="my-8 text-gray-700 leading-7">
+                            データ拡張技術の導入により、物体検出の評価指標であるmAP*は、データを拡張しなかった時と比較して最大13.8ポイント向上し、0.84を達成しました。この成果による高性能なモデル開発によって、海洋環境の保全、海難事故の予防、海上における安全保障など、様々な分野での活用が期待できます。
+                        </p>
+                        <p class="my-8 text-gray-700 leading-7">
+                            上記の結果は、1枚の画像から10種類の画像データを生成・拡張したものです。拡張の最適な数は、対象物の種類や元の画像の枚数によって調整する必要がありますが、Diffusion modelを追加の微調整なしでそのまま活用できるため、専門知識がなくても簡単に利用できる手法です。また、開発プロセスにおいても、効率的かつ手軽に導入できる点が大きな利点となります。
+                        </p>
+                        <span class="text-gray-500 text-sm">
+                            *mAP（mean Average Precision）：<br>複数の物体を検出するタスクにおいて、各物体の検出精度を平均した値を計算することで、モデル全体の性能を総合的に評価する指標
+                        </span>
+
+                        <div class="flex flex-col justify-center items-center mt-16">
+                            <img src="20240111121343.png" alt="Image-to-Image 1" class="w-3/4 mb-4">
+                            <p class="text-gray-500 text-sm">Top : Groundtruth label / Bottom : Detection results for experiments 1-4</p>
+                        </div>
+                    </section>
+
+                    <section class="mb-20">
+                        <h2 class="text-4xl mt-4 mb-8 case-study-heading w-full">
+                            Image-to-Image 適用例
+                        </h2>
+                        <p class="my-8 text-gray-700 leading-7">
+                            船舶検出以外にも、様々な業界・分野においてDiffusion modelの Image-to-Imageの手法を用いたデータ拡張技術の適用により成果が創出されています。
+                        </p>
+                        <section>
+                            <h3 class="flex items-center bg-gray-100 p-4 my-8">
+                                <svg class="w-6 h-6 check-icon mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span class="font-semibold text-lg ml-2">医療画像診断支援</span>
+                            </h3>
+                            <p class="my-8 text-gray-700 leading-7">
+                                医療画像診断支援AI開発においては、学習データとなる画像の不足が課題となっています。特に、希少疾患など症例数が限られているケースでは、高精度なAIモデルの開発が困難です。Image-to-Imageを活用することで、既存の医療画像から様々な病変のバリエーションを生成し、診断支援AIの学習データを充実させることが期待できます。
+                            </p>
+                            <span class="text-gray-500 text-sm">
+                                出典："<a href="https://www.sciencedirect.com/science/article/abs/pii/S1361841523001068" target="_blank" class="underline">Diffusion models for medical image analysis</a>"
+                            </span>
+                        </section>
+                        <section>
+                            <h3 class="flex items-center bg-gray-100 p-4 my-8">
+                                <svg class="w-6 h-6 check-icon mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span class="font-semibold text-lg ml-2">製造業における品質管理</span>
+                            </h3>
+                            <p class="my-8 text-gray-700 leading-7">
+                                製造業における製品の品質管理は、目視検査に頼ることが多く、検査員の負担が大きくなっています。また、熟練検査員の不足や人為的なミスによる検査精度のバラつきも課題です。Image-to-Imageを活用することで、限られた不良品画像から様々な欠陥を模倣した画像を生成し、外観検査AIの学習データを増やすことができます。これにより、検査AIの精度向上と検査の自動化による省人化・効率化が期待できます。
+                            </p>
+                            <span class="text-gray-500 text-sm">
+                                出典："<a href="https://arxiv.org/html/2406.06218v1" target="_blank" class="underline">Boosting Industrial Anomaly Detection using Diffusion Models</a>"
+                            </span>
+                        </section>
+                        <section>
+                            <h3 class="flex items-center bg-gray-100 p-4 my-8">
+                                <svg class="w-6 h-6 check-icon mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span class="font-semibold text-lg ml-2">警備・防犯・都市計画等における群衆管理</span>
+                            </h3>
+                            <p class="my-8 text-gray-700 leading-7">
+                                イベント会場や駅など、多くの人が集まる場所では、安全確保や混雑緩和のために、群衆の密度や流れを正確に把握することが重要です。Image-to-Imageを活用することで、既存の画像から様々な密度や状況の群衆画像を生成し、群衆カウントAIの学習データを充実させることができます。これにより、群衆カウントAIの精度が向上し、より効果的な警備計画や都市計画の立案に役立てることができます。
+                            </p>
+                            <span class="text-gray-500 text-sm">
+                                出典："<a href="https://www.semanticscholar.org/paper/Dataset-Level-Directed-Image-Translation-for-Crowd-Tan-Ishikawa/d105f8749052cf92c8260cb5db2532d8127e19bb" target="_blank" class="underline">Dataset-Level Directed Image Translation for Crowd Counting</a>"
+                            </span>
+                        </section>
+                        <div class="flex flex-row justify-center items-center mt-16 w-full overflow-hidden">
+                            <img id="image1" src="AdobeStock_314999310_Preview.jpg" alt="Image-to-Image 1" class="w-1/3 object-cover mr-1">
+                            <img id="image2" src="AdobeStock_737701455_Preview.jpeg" alt="Image-to-Image 2" class="w-1/3 object-cover mr-1">
+                            <img id="image3" src="AdobeStock_719748796_Preview.jpeg" alt="Image-to-Image 3" class="w-1/3 object-cover">
+                        </div>
+                    </section>
+
+                    <section class="mb-20">
+                        <h2 class="text-4xl mt-4 mb-8 case-study-heading w-full">
+                            Ridge-i の強み - 実プロジェクトにおける課題解決力 -
+                        </h2>
+                        <h3 class="flex items-center bg-gray-100 p-4 my-7">
+                            <svg class="w-6 h-6 check-icon mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span class="font-semibold text-lg ml-2">先端技術を持ちいたソリューション開発</span>
+                        </h3>
+                        <p class="my-8 text-gray-700 leading-7">
+                            Ridge-iは、Diffusion modelをはじめとする最先端のAI技術を駆使し、顧客のビジネス課題解決に貢献しています。
+                        </p>
+                        <p class="my-8 text-gray-700 leading-7">
+                            最先端技術の研究開発はもちろんのこと、お客様の課題やニーズに最適な技術を選択し、独自にカスタマイズすることで、実用的なソリューションを迅速に提供いたします。
+                        </p>
+                        <h3 class="flex items-center bg-gray-100 p-4 my-8">
+                            <svg class="w-6 h-6 check-icon mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span class="font-semibold text-lg ml-2">クライアントへの伴走による課題解決</span>
+                        </h3>
+                        <p class="my-8 text-gray-700 leading-7">
+                            また、技術力だけでなく、クライアントの事業に深く入り込み、課題・ニーズを的確に捉えながらプロジェクトを進めていくことで期待を超える成果を創出します。
+                        </p>
+                    </section>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script>
+        window.addEventListener('load', function() {
+            const image2 = document.getElementById('image2');
+            const image1 = document.getElementById('image1');
+            const image3 = document.getElementById('image3');
+
+            const image2Width = image2.clientWidth;
+            const image2Height = image2.clientHeight;
+
+            image1.style.width = `${image2Width}px`;
+            image1.style.height = `${image2Height}px`;
+            image3.style.width = `${image2Width}px`;
+            image3.style.height = `${image2Height}px`;
+        });
+    </script>
+</body>
+</html>
+
