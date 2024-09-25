@@ -95,6 +95,9 @@
                         <p class="my-8 text-gray-700 leading-7">
                             Diffusion modelは、入力されたデータに対してノイズを徐々に加えて変換する過程と、そのノイズを除去して元のデータに戻す過程を学習させることで、データ生成を行う深層学習モデルです。このDiffusion model を使用して合成データを生成する最も一般的な方法は、テキストから画像への変換方法ですが、特殊な画像の場合、テキストで表現することが難しく、また、一般的な対象物（猫、犬、テーブル、椅子など）でトレーニングされたDifuusion model が専門用語を理解することも難しく、実務においての利用にハードルがあります。
                         </p>
+                        <p class="my-8 text-gray-700 leading-7">
+                            本技術は昨年（2023年）に広く注目されたものであり技術進展の速さを考慮すると最新技術ではありませんが、現在もなお、実務におけるデータ拡張の課題に対する有用なソリューションの1つであることから、今回ご紹介いたします。
+                        </p>
                         <h3 class="flex items-center bg-gray-100 p-4 my-8">
                             <svg class="w-6 h-6 check-icon mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
@@ -132,18 +135,19 @@
                             <span class="font-semibold text-lg ml-2">成果</span>
                         </h3>
                         <p class="my-8 text-gray-700 leading-7">
-                            データ拡張技術の導入により、物体検出の評価指標であるmAP*は、データを拡張しなかった時と比較して最大13.8ポイント向上し、0.84を達成しました。この成果による高性能なモデル開発によって、海洋環境の保全、海難事故の予防、海上における安全保障など、様々な分野での活用が期待できます。
+                            データ拡張技術の導入により、60枚のデータを10倍に拡張し、合計660枚のデータを用いたモデル学習ではデータを拡張しなかった時と比較し、物体検出の評価指標であるmAP*が、13.8ポイント向上（70.7% → 84.5%）しました。この成果による高性能なモデル開発によって、海洋環境の保全、海難事故の予防、海上における安全保障など、様々な分野での活用が期待できます。
                         </p>
                         <p class="my-8 text-gray-700 leading-7">
                             上記の結果は、1枚の画像から10種類の画像データを生成・拡張したものです。拡張の最適な数は、対象物の種類や元の画像の枚数によって調整する必要がありますが、Diffusion modelを追加の微調整なしでそのまま活用できるため、専門知識がなくても簡単に利用できる手法です。また、開発プロセスにおいても、効率的かつ手軽に導入できる点が大きな利点となります。
                         </p>
-                        <span class="text-gray-500 text-sm">
+                        <p class="text-gray-500 text-sm mb-8">
                             *mAP（mean Average Precision）：<br>複数の物体を検出するタスクにおいて、各物体の検出精度を平均した値を計算することで、モデル全体の性能を総合的に評価する指標
-                        </span>
-
+                        </p>
+                        <p class="text-gray-500 text-sm">
+                            関連技術の詳細 ：<br>こちらの弊社技術ブログ<a href="https://iblog.ridge-i.com/entry/2024/02/22/130409" class="underline text-blue-600">"Using diffusion models to generate synthetic data for real-life projects"</a>をご覧ください。
+                        </p>                    
                         <div class="flex flex-col justify-center items-center mt-16">
-                            <img src="20240111121343.png" alt="Image-to-Image 1" class="w-3/4 mb-4">
-                            <p class="text-gray-500 text-sm">Top : Groundtruth label / Bottom : Detection results for experiments 1-4</p>
+                            <img src="original generated.png" alt="Image-to-Image 1" class="w-full mb-4">
                         </div>
                     </section>
 
@@ -165,7 +169,7 @@
                                 医療画像診断支援AI開発においては、学習データとなる画像の不足が課題となっています。特に、希少疾患など症例数が限られているケースでは、高精度なAIモデルの開発が困難です。Image-to-Imageを活用することで、既存の医療画像から様々な病変のバリエーションを生成し、診断支援AIの学習データを充実させることが期待できます。
                             </p>
                             <span class="text-gray-500 text-sm">
-                                出典："<a href="https://www.sciencedirect.com/science/article/abs/pii/S1361841523001068" target="_blank" class="underline">Diffusion models for medical image analysis</a>"
+                                出典："<a href="https://www.sciencedirect.com/science/article/abs/pii/S1361841523001068" target="_blank" class="underline">Kazerouni, A., Aghdam, E. K., Heidari, M., Azad, R., Fayyaz, M., Hacihaliloglu, I., & Merhof, D. (2023). Diffusion models in medical imaging: A comprehensive survey.</a>"
                             </span>
                         </section>
                         <section>
@@ -179,7 +183,7 @@
                                 製造業における製品の品質管理は、目視検査に頼ることが多く、検査員の負担が大きくなっています。また、熟練検査員の不足や人為的なミスによる検査精度のバラつきも課題です。Image-to-Imageを活用することで、限られた不良品画像から様々な欠陥を模倣した画像を生成し、外観検査AIの学習データを増やすことができます。これにより、検査AIの精度向上と検査の自動化による省人化・効率化が期待できます。
                             </p>
                             <span class="text-gray-500 text-sm">
-                                出典："<a href="https://arxiv.org/html/2406.06218v1" target="_blank" class="underline">Boosting Industrial Anomaly Detection using Diffusion Models</a>"
+                                出典："<a href="https://arxiv.org/html/2406.06218v1" target="_blank" class="underline">Sousa, T., Ries, B., & Guelfi, N. (2024). Data Augmentation in Earth Observation: A Diffusion Model Approach.</a>"
                             </span>
                         </section>
                         <section>
@@ -193,7 +197,7 @@
                                 イベント会場や駅など、多くの人が集まる場所では、安全確保や混雑緩和のために、群衆の密度や流れを正確に把握することが重要です。Image-to-Imageを活用することで、既存の画像から様々な密度や状況の群衆画像を生成し、群衆カウントAIの学習データを充実させることができます。これにより、群衆カウントAIの精度が向上し、より効果的な警備計画や都市計画の立案に役立てることができます。
                             </p>
                             <span class="text-gray-500 text-sm">
-                                出典："<a href="https://www.semanticscholar.org/paper/Dataset-Level-Directed-Image-Translation-for-Crowd-Tan-Ishikawa/d105f8749052cf92c8260cb5db2532d8127e19bb" target="_blank" class="underline">Dataset-Level Directed Image Translation for Crowd Counting</a>"
+                                出典："<a href="https://www.semanticscholar.org/paper/Dataset-Level-Directed-Image-Translation-for-Crowd-Tan-Ishikawa/d105f8749052cf92c8260cb5db2532d8127e19bb" target="_blank" class="underline">Tan, X., & Ishikawa, H. (2023). Dataset-Level Directed Image Translation for Cross-Domain Crowd Counting. In International Conference on Image Processing.</a>"
                             </span>
                         </section>
                         <div class="flex flex-row justify-center items-center mt-16 w-full overflow-hidden">
@@ -228,6 +232,15 @@
                         <p class="my-8 text-gray-700 leading-7">
                             また、技術力だけでなく、クライアントの事業に深く入り込み、課題・ニーズを的確に捉えながらプロジェクトを進めていくことで期待を超える成果を創出します。
                         </p>
+                    </section>
+                    <section class="mb-20">
+                        <h2 class="text-3xl pb-4 mt-4 mb-8 case-study-heading w-full">
+                            お問い合わせはこちら
+                        </h2>
+                        <p class="mt-8 text-gray-700 leading-7">
+                            本リリース内容に関するご質問や、AIソリューションに関するお問い合わせは、以下よりお気軽にご連絡ください。
+                        </p>
+                        <a href="https://ridge-i.com/contact/" target="_blank" class="underline">お問い合わせ</a>
                     </section>
                 </div>
             </div>
